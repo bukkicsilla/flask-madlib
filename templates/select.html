@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Madlibs</h1>
+<form action="/home">
+  <select name="id">
+    {% for i in range(length) %}
+    <option value="{{ i }}">story {{ i+1 }}</option>
+    {% endfor %}
+  </select>
+  <button>Go</button>
+</form>
+{% endblock %}

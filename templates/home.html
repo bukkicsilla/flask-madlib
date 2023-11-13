@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Matlib start page</h1>
+<form action="/story">
+  {% for i in range(length) %}
+  <div>
+    <label>{{prompts[i]}}</label>
+    <input type="text" name="{{i}}" />
+  </div>
+  {% endfor %}
+  <input type="hidden" name="story_id" value="{{story_id}}" />
+  <button>Submit</button>
+</form>
+{% endblock %}
